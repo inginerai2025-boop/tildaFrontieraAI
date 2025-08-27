@@ -1,0 +1,45 @@
+ErrorDocument 403 /404.html
+ErrorDocument 404 /404.html
+
+DirectoryIndex page71547939.html
+
+RewriteEngine On
+
+RewriteCond %{HTTP:X-Forwarded-Proto} =http
+RewriteRule ^(.*)$ https://inginer\.ai/$1 [R=301,L]
+
+RewriteCond %{HTTP:X-Forwarded-Proto} =https
+RewriteCond %{HTTP_HOST} ^www\.inginer.ai [NC]
+RewriteRule ^(.*)$ https://inginer\.ai/$1 [R=301,L]
+
+RewriteCond %{REQUEST_FILENAME} /robots.txt
+RewriteCond "%{DOCUMENT_ROOT}/robots_%{HTTP_HOST}.txt" -f
+RewriteRule ^(.*)$ robots_%{HTTP_HOST}.txt [NC,L]
+RewriteRule ^footer$ page67748737.html [NC]
+RewriteRule ^footer/$ page67748737.html [NC]
+
+RewriteRule ^intensiv$ page69501875.html [NC]
+RewriteRule ^intensiv/$ page69501875.html [NC]
+
+RewriteRule ^thxgratis$ page69900649.html [NC]
+RewriteRule ^thxgratis/$ page69900649.html [NC]
+
+RewriteRule ^thxvip$ page69925795.html [NC]
+RewriteRule ^thxvip/$ page69925795.html [NC]
+
+RewriteRule ^curs$ page71029519.html [NC]
+RewriteRule ^curs/$ page71029519.html [NC]
+
+RewriteRule ^inginerai$ page71547939.html [NC]
+RewriteRule ^inginerai/$ page71547939.html [NC]
+
+RewriteRule ^curs-express-chatgpt$ page72574753.html [NC]
+RewriteRule ^curs-express-chatgpt/$ page72574753.html [NC]
+
+RewriteRule ^curs-express-chatgpt_v2$ page72747165.html [NC]
+RewriteRule ^curs-express-chatgpt_v2/$ page72747165.html [NC]
+
+RewriteRule ^intensiv-frontiera-cu-ai$ page74183815.html [NC]
+RewriteRule ^intensiv-frontiera-cu-ai/$ page74183815.html [NC]
+
+
